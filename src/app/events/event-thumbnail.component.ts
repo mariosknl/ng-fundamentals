@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'selector-name',
+  selector: 'event-thumbnail',
   template: `
     <div class="well hoverwell thumbnail">
       <h2>{{ event.name }}</h2>
@@ -16,7 +16,9 @@ import { Component, OnInit } from '@angular/core';
     </div>
   `,
 })
-export class NameComponent implements OnInit {
+export class EventThumbnailComponent implements OnInit {
+  @Input() event: any;
+
   constructor() {}
 
   ngOnInit() {}
