@@ -2,27 +2,48 @@
   <h1>Edit Your Profile</h1>
   <hr />
   <div class="col-md-4">
-    <form autocomplete="off" novalidate>
-      <div class="form-group">
+    <form
+      [formGroup]="profileForm"
+      (ngSubmit)="saveProfile(profileForm.value)"
+      autocomplete="off"
+      novalidate
+    >
+      <div
+        class="form-group"
+        [ngClass]="{
+          error: !validateFirstName()
+        }"
+      >
         <label for="firstName">First Name:</label>
+        <em *ngIf="!validateFirstName()">Required</em>
         <input
           id="firstName"
           type="text"
           class="form-control"
           placeholder="First Name..."
+          formControlName="firstName"
         />
       </div>
-      <div class="form-group">
+      <div
+        class="form-group"
+        [ngClass]="{
+          error: !validateLastName()
+        }"
+      >
         <label for="lastName">Last Name:</label>
+        <em *ngIf="!validateLastName()">Required</em>
         <input
           id="lastName"
           type="text"
           class="form-control"
           placeholder="Last Name..."
+          formControlName="lastName"
         />
       </div>
 
-      <button type="submit" class="btn btn-primary">Save</button>
+      <button (click)="cancel()" type="submit" class="btn btn-primary">
+        Save
+      </button>
       <button type="button" class="btn btn-default">Cancel</button>
     </form>
   </div>
