@@ -23,6 +23,7 @@ import { EventService } from '../shared/event.service';
 export class EventDetailsComponent implements OnInit {
   event: any = {} as IEvent;
   addMode: boolean = false;
+  filterBy: string = 'all';
 
   constructor(
     private eventService: EventService,
