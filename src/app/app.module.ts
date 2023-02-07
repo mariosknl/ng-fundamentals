@@ -19,9 +19,15 @@ import { EventsAppComponent } from './events-app.component';
 import { NavbarComponent } from './nav/navbar.component';
 import { appRoutes } from './routes';
 import { AuthService } from './user/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   declarations: [
     EventsAppComponent,
     EventsListComponent,
