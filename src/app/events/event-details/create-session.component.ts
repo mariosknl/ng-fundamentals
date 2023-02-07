@@ -32,7 +32,7 @@ import { ISession, restrictedWords } from '../shared';
   ],
 })
 export class CreateSessionComponent implements OnInit {
-  newSessionForm: FormGroup = new FormGroup({});
+  newSessionForm: FormGroup = {} as FormGroup;
   name: FormControl = new FormControl('');
   presenter: FormControl = new FormControl('');
   duration: FormControl = new FormControl('');
