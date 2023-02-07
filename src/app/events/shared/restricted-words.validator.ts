@@ -1,7 +1,7 @@
 import { FormControl } from '@angular/forms';
 
 export function restrictedWords(words: any) {
-  return (control: FormControl): { [key: string]: any } | null => {
+  return (control: FormControl): any => {
     if (!words) return null;
 
     let invalidWords = words
