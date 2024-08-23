@@ -21,7 +21,7 @@
     "ngf-bootstrap": "^0.0.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.0"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^17.2.1",
